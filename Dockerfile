@@ -16,6 +16,9 @@ RUN set -x \
     ttf-freefont \
     chromium
 
+RUN mkdir -p /app/data/sessions && chown -R node:node /app/data/sessions
+
+
 # Copy package.json and package-lock.json to the working directory
 COPY package*.json ./
 
